@@ -1,14 +1,15 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+import Sponsors from "../components/Sponsors.astro";
 ---
 <SiteLayout page="index">
-<main>
+<main id="main-content">
             <div class="slider">
                 <ul class="slides">
                     <li>
                         <img src="/images/background1.jpg" alt="Students at the Joe Holbrook Memorial Math Competition" />
                         <div class="caption center-align">
-                            <h3>14th Annual Joe Holbrook Memorial Math Competition</h3>
+                            <h1 class="hero-title">14th Annual Joe Holbrook Memorial Math Competition</h1>
                             <h5 class="light grey-text text-lighten-3">
                                 October 11-12, 2025 at the Bergen County Academies
                             </h5>
@@ -32,13 +33,13 @@ import SiteLayout from "../layouts/SiteLayout.astro";
             </div>
 
             <div class="container">
-                <div class="section">
+                <div class="section home-summary">
                     <blockquote>
                         The 14th annual JHMMC took place on October 11-12, 2025. Full results and tests are now available on the
                         <a href="/archive">Archive</a> page. Thanks to all those who competed!
                     </blockquote>
                     
-                    <div class="row">
+                    <div class="row intro-grid">
                         <div class="col s12 m6">
                             <div class="icon-block">
                                 <a href="https://bcts.bergen.org/index.php/bca-home">
@@ -55,7 +56,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
                                 </p>
                                 <p>
                                     To see more information about the Bergen County Academies Math Team, visit its
-                                    official website at <a href="https://bcamathteam.org">https://bcamathteam.org.</a>
+                                    official website at <a href="https://bcamathteam.org">bcamathteam.org</a>.
                                 </p>
                             </div>
                         </div>
@@ -79,48 +80,6 @@ import SiteLayout from "../layouts/SiteLayout.astro";
                 </div>
             </div>
 
-            <div class="container">
-                <div class="col s12" style="text-align: center">
-                    <h3>Sponsors</h3>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <a href="https://www.lingoace.com/"
-                            ><img class="logo img-responsive" src="/images/LingoAce.jpg" alt="LingoAce"
-                        /></a>
-                    </div>
-                    <div class="col s4">
-                        <a href="http://www.artofproblemsolving.com/"
-                            ><img class="logo img-responsive" src="/images/aops.png" alt="Art of Problem Solving"
-                        /></a>
-                    </div>
-                    <div class="col s4">
-                        <a href="https://quantumcomputinginc.com/"
-                            ><img class="logo img-responsive" src="/images/quantum.jpeg" alt="Quantum Computing Inc."
-                        /></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <a href="https://live.poshenloh.com/"
-                            ><img class="logo img-responsive" src="/images/live.png" alt="LIVE - Po-Shen Loh"
-                        /></a>
-                    </div>
-                    <div class="col s4">
-                        <img class="logo img-responsive" src="/images/Azure.png" alt="Azure Partners" />
-                    </div>
-                    <div class="col s4">
-                        <h4 class="center">The Plotnick Family</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4 offset-s2">
-                        <h4 class="center">The Huang Family</h4>
-                    </div>
-                    <div class="col s4">
-                        <h4 class="center">The Chen & Hong Family</h4>
-                    </div>
-                </div>
-            </div>
+            <Sponsors />
         </main>
 </SiteLayout>

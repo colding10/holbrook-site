@@ -7,6 +7,7 @@ const origin = "https://holbrook.bcamathteam.org";
 const pages = ["index.html", "about.html", "archive.html", "staff.html", "404.html"];
 const failures = [];
 let references = 0;
+const titles = new Set();
 
 function resolveOutput(url) {
   const pathname = decodeURIComponent(url.pathname);
@@ -25,6 +26,11 @@ for (const page of pages) {
   const html = readFileSync(filename, "utf8").replace(/<!--[\s\S]*?-->/g, "");
   assert.match(html, /Maintained by[\s\S]*?Colin Ding/, `${page}: maintainer credit`);
   assert.match(html, /mailto:coldin28@bergen\.org/, `${page}: maintainer email`);
+  const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
+  assert.ok(title && !titles.has(title), `${page}: missing or duplicate page title`);
+  titles.add(title);
+  assert.equal((html.match(/<h1\b/g) || []).length, 1, `${page}: one main heading`);
+  assert.doesNotMatch(html, /\bonclick=|jquery/i, `${page}: no inline handlers or jQuery dependency`);
   const base = new URL(page === "index.html" ? "/" : `/${page}`, origin);
 
   for (const match of html.matchAll(/\b(?:href|src|data)="([^"]+)"/g)) {
@@ -48,6 +54,17 @@ for (const page of pages) {
     }
   }
 }
+
+// Regression: HTML compression previously joined text around inline elements.
+const homeText = readFileSync(path.join(output, "index.html"), "utf8")
+  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "")
+  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, "")
+  .replace(/<[^>]+>/g, "")
+  .replace(/\s+/g, " ");
+assert.match(homeText, /The BCA Math Team proudly presented/, "Space after italic team name");
+assert.match(homeText, /available on the Archive page/, "Space before archive link");
+assert.match(homeText, /Maintained by Colin Ding/, "Space before maintainer link");
+assert.match(homeText, new RegExp(`${new Date().getFullYear()} JHMMC`), "Current copyright year");
 
 function walk(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {

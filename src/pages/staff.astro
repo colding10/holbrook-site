@@ -3,7 +3,8 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 import { site } from "../data/site";
 ---
 <SiteLayout page="staff">
-<main>
+<main id="main-content" class="content-page">
+  <h1 class="visually-hidden">Competition organizers</h1>
             <div class="container">
                 <div class="row"></div>
                 <div class="row">
@@ -135,9 +136,7 @@ import { site } from "../data/site";
                             </tr>
                         </tbody>
                     </table>
-                    <br />
-                    <br />
-                    <br />
+
                 </div>
             </div>
         </main>

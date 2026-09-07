@@ -1,24 +1,28 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/archive", label: "Archive" },
+  { href: "/staff", label: "Staff" },
+];
+const currentPath = Astro.url.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+---
 <header>
-            <div class="navbar-fixed">
-                <nav class="white" role="navigation">
-                    <div class="nav-wrapper container">
-                        <a id="logo-container" href="/" class="brand-logo">JHMMC</a>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about.html">About</a></li>
-                            <li><a href="/archive.html">Archive</a></li>
-                            <li><a href="/staff.html">Staff</a></li>
-                        </ul>
-                        <a href="#" data-target="nav-mobile" class="sidenav-trigger" aria-label="Open navigation"
-                            ><i class="material-icons">menu</i></a
-                        >
-                    </div>
-                </nav>
-            </div>
-            <ul class="sidenav" id="nav-mobile">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/archive.html">Archive</a></li>
-                <li><a href="/staff.html">Staff</a></li>
-            </ul>
-        </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="navbar-fixed">
+    <nav class="white" aria-label="Main navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">JHMMC</a>
+        <ul class="right hide-on-med-and-down">
+          {links.map(({ href, label }) => <li><a href={href} aria-current={currentPath === href ? "page" : undefined}>{label}</a></li>)}
+        </ul>
+        <a href="#nav-mobile" data-target="nav-mobile" class="sidenav-trigger" aria-label="Open navigation" aria-controls="nav-mobile" aria-expanded="false">
+          <i class="material-icons" aria-hidden="true">menu</i>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="nav-mobile" aria-label="Mobile navigation">
+    {links.map(({ href, label }) => <li><a href={href} aria-current={currentPath === href ? "page" : undefined}>{label}</a></li>)}
+  </ul>
+</header>

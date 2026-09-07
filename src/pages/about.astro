@@ -2,7 +2,8 @@
 import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 <SiteLayout page="about">
-<main>
+<main id="main-content" class="content-page">
+  <h1 class="visually-hidden">Competition information</h1>
         <div class="container">
             <div class="row"></div>
             <div class="row">
@@ -79,10 +80,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
                     </tbody>
                 </table>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+
             
         </div>
 
@@ -90,8 +88,8 @@ import SiteLayout from "../layouts/SiteLayout.astro";
             <div class="container">
                 <h4>Schedule</h4>
                 <p>
-                    The schedule for each day of the 2025 competition was:
-                    <ul>
+                    The schedule for each day of the 2025 competition was:</p>
+                    <ul class="schedule-list">
                         <li>8:30 - Check-in began, auditorium lobby.</li>
                         <li>9:30 - All contestants arrived by this time. Opening remarks and instructions.</li>
                         <li>10:00 - Contestants brought to testing rooms, competition began</li>
@@ -99,13 +97,10 @@ import SiteLayout from "../layouts/SiteLayout.astro";
                         <li>12:00 - Students returned to gymnasium. Keynote address and/or activities.</li>
                         <li>1:30 - Award ceremony in gymnasium.</li>
                     </ul>
-                    The award ceremony ended around 2:00pm.
+                    <p>The award ceremony ended around 2:00pm.
                 </p>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
+
         </div>
         <div id="location" class="col s12">
             <div class="container">
@@ -124,7 +119,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
                                 <p>Hackensack, New Jersey 07601</p>
                             </div>
                             <div class="card-action">
-                                <a onclick="$('#map-modal').modal('open');" style="cursor: pointer;" class="waves-effect waves-light btn teal
+                                <a href="#map-modal" class="modal-trigger waves-effect waves-light btn teal
                                         lighten-2">View google
                                     maps</a>
                             </div>
