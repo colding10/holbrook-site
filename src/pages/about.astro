@@ -1,0 +1,242 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+<SiteLayout page="about">
+<main>
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a class="active" href="#quickinfo">Quick Info</a></li>
+                        <li class="tab col s3"><a href="#schedule">Schedule</a></li>
+                        <li class="tab col s3"><a href="#location">Location</a></li>
+                        <li class="tab col s3"><a href="#rules">Rules</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="quickinfo" class="col s12">
+            <div class="container">
+                <h4>Quick Information</h4>
+                
+                <blockquote>
+                    The 14th annual JHMMC took place on October 11-12, 2025. Thank you to all participants! Information below is for reference about the 2025 competition.
+                </blockquote>
+                <p>The contest was held <i>in person</i> across two days separated by grade.</p>
+                <table class="highlight">
+                    <tbody>
+                        <tr>
+                            <td class="name">Dates:</td>
+                            <td>The competition was held on Saturday, October 11, 2025 for 6th graders and below; Sunday, October 12, 2025 for 7th-8th graders.</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Time:</td>
+                            <td>8:30 AM to 2:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Eligibility:</td>
+                            <td>The competition was open to students from the
+                                4th to 8th grades. Those in 3rd grade and
+                                below could register as 4th
+                                grade. Students could only take one contest,
+                                that for their own grade level. Students who participated on Saturday could not participate again on Sunday.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="name">Registration:</td>
+                            <td>
+                                Registration for the 2025 competition has closed. The competition took place on October 11-12, 2025.<br><br>
+
+                                Online and on-site registration were available for both days of the competition. 
+                                The participation fee was $40 for online registration and $50 for walk-in registration (cash only).
+                                <br><br>
+                                Please check back in fall 2026 for information about the 2026 competition.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="name">Results:</td>
+                            <td> Results were compiled, with top-scoring
+                                participants announced the day-of at the
+                                award ceremony. Complete results and all test materials 
+                                are now available on the <a href="/archive.html">Archive page</a>.
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="name">Contact:</td>
+                            <td>For any questions or concerns,
+                                please reach out to Mr. Pinyan at
+                                <a href="mailto:jonpin@bergen.org">jonpin@bergen.org</a>.
+                                You can also visit <a href="https://bcamathteam.org">the BCA Math Team website</a> for more information.
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+        </div>
+
+        <div id="schedule" class="col s12">
+            <div class="container">
+                <h4>Schedule</h4>
+                <p>
+                    The schedule for each day of the 2025 competition was:
+                    <ul>
+                        <li>8:30 - Check-in began, auditorium lobby.</li>
+                        <li>9:30 - All contestants arrived by this time. Opening remarks and instructions.</li>
+                        <li>10:00 - Contestants brought to testing rooms, competition began</li>
+                        <li>11:30 - Pizza lunch served to contestants in testing rooms</li>
+                        <li>12:00 - Students returned to gymnasium. Keynote address and/or activities.</li>
+                        <li>1:30 - Award ceremony in gymnasium.</li>
+                    </ul>
+                    The award ceremony ended around 2:00pm.
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="location" class="col s12">
+            <div class="container">
+                <h4>Location</h4>
+                <div class="row">
+                    <div class="col s12 m10 offset-m1">
+                        <div class="card grey lighten-4">
+                            <div class="card-image">
+                                <img src="/images/bca_front_view.jpg" style="filter: brightness(70%);"
+                                    alt="Bergen County Academies">
+                                <span class="card-title">Bergen County
+                                    Academies</span>
+                            </div>
+                            <div class="card-content">
+                                <p>200 Hackensack Avenue</p>
+                                <p>Hackensack, New Jersey 07601</p>
+                            </div>
+                            <div class="card-action">
+                                <a onclick="$('#map-modal').modal('open');" style="cursor: pointer;" class="waves-effect waves-light btn teal
+                                        lighten-2">View google
+                                    maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="map-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="map-responsive">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.63862236354!2d-74.03578188380395!3d40.901741379311765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fa74ede555a7%3A0xf25cd69861dd5ef7!2s200+Hackensack+Ave%2C+Hackensack%2C+NJ+07601!5e0!3m2!1sen!2sus!4v1566338187462!5m2!1sen!2sus"
+                                width="600" height="450" title="Map to Bergen County Academies" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close btn-flat">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rules" class="col s12">
+            <div class="container">
+                <h4>Rules</h4>
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h4>General Rules</h4>
+                            </li>
+                            <li class="collection-item">Calculators are not
+                                allowed.</li>
+                            <li class="collection-item">This is an
+                                individual test, so you may not communicate
+                                with
+                                anyone else
+                                taking it.</li>
+                            <li class="collection-item">Once time begins, we
+                                will not answer any questions about the
+                                problems.
+                            </li>
+                            <li class="collection-item">You will have 75
+                                minutes to solve 40 problems. Once time is
+                                called, you
+                                must put down your pen or pencil and stop
+                                working.</li>
+                            <li class="collection-item">Scores will be
+                                posted on the website. Your score will
+                                appear
+                                next to
+                                your identification number.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h5>Specifics</h5>
+                            </li>
+                            <li class="collection-item">You have a test
+                                paper, answer sheet, and scrap paper.</li>
+                            <li class="collection-item">You may use space on
+                                your test paper and additional scrap paper
+                                to do
+                                work. Your answers must be written on the
+                                answer sheet. We will not look at answers
+                                written on
+                                your test paper.</li>
+                            <li class="collection-item">Each problem has
+                                only one answer. If you put more than one
+                                answer for a
+                                problem, you will be marked wrong. When
+                                changing an answer, be sure to erase or
+                                cross
+                                out
+                                completely.</li>
+                            <li class="collection-item">Write legibly. If
+                                the graders cannot read your answer, it will
+                                be marked
+                                incorrect.</li>
+                            <li class="collection-item">Do not approximate
+                                constants unless a problem specifies you should.</li>
+                            <li class="collection-item">If a unit is
+                                indicated in the problem, the answer must be
+                                given
+                                in that
+                                unit. For instance, if the problem asks for
+                                the answer in hours, you cannot give your
+                                answer in
+                                minutes. Furthermore, you don't need to
+                                write the unit, as the graders will assume
+                                your
+                                answer
+                                is in the units asked for in the problem.</li>
+                            <li class="collection-item">There is no penalty
+                                for guessing.</li>
+                            <li class="collection-item">Ties will be broken
+                                based on the number of correct responses to
+                                the last
+                                ten questions. If a tie remains, then the
+                                correct responses to the last five questions
+                                will
+                                break the tie.</li>
+                            <li class="collection-item">We will announce how
+                                much time is remaining often during the
+                                test.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</SiteLayout>

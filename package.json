@@ -1,0 +1,40 @@
+{
+  "name": "holbrook-site",
+  "version": "1.0.0",
+  "description": "Joe Holbrook Memorial Math Competition website, rebuilt in Astro.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "verify": "npm run check && npm run build && node scripts/verify-build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colding10/holbrook-site.git"
+  },
+  "keywords": [
+    "astro",
+    "static-site",
+    "math-team"
+  ],
+  "author": "Colin Ding <coldin28@bergen.org>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/colding10/holbrook-site/issues"
+  },
+  "homepage": "https://holbrook.bcamathteam.org",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.0.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3"
+  },
+  "private": true
+}

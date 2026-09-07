@@ -1,0 +1,48 @@
+---
+import { site } from "../data/site";
+---
+<footer class="page-footer white z-depth-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <a href="https://bcts.bergen.org/index.php/bca-home"
+                            ><img src="/images/bcacolor.png" alt="BCA Logo" height="130px"
+                        /></a>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="black-text">Connect</h5>
+                        <ul style="text-decoration: underline">
+                            <li><a class="black-text" href="https://bcamathteam.org/">BCA Math Team</a></li>
+                            <li>
+                                <a class="black-text" href="https://bcts.bergen.org/index.php/bca-home"
+                                    >Bergen County Academies</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="black-text"
+                                    href="https://www.facebook.com/Joe-Holbrook-Memorial-Math-Competition-470281533772274/"
+                                    >JHMMC Facebook page</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="black-text">Coaches</h5>
+                        <ul class="black-text">
+                            <li>Dr. Michael Abramson</li>
+                            <li>Mr. Jon Pinyan</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l12 s12">
+                        <p class="black-text"><em>Website developed by Daniel Kim</em></p>
+                        <p class="black-text"><em>Maintained by <a class="black-text" href={`mailto:${site.maintainer.email}`}>{site.maintainer.name}</a></em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container black-text">&copy; 2025 JHMMC &bull; Bergen County Academies</div>
+            </div>
+        </footer>

@@ -1,0 +1,41 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { site } from "../data/site";
+
+interface Props {
+  page: "index" | "about" | "archive" | "staff" | "404";
+}
+
+const { page } = Astro.props;
+const canonical = new URL(page === "index" ? "/" : `/${page}`, site.url);
+// About used the minified Materialize bundle in the original site.
+const materialize = page === "about" ? "materialize.min" : "materialize";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{site.name}</title>
+    <meta name="description" content={site.description} />
+    <meta name="author" content={site.maintainer.name} />
+    {page !== "404" && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href={`/css/${materialize}.css`} type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    {page === "archive" && <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />}
+  </head>
+  <body>
+    <SiteHeader />
+    <slot />
+    <SiteFooter />
+    <script is:inline src="/js/jquery-2.1.1.min.js"></script>
+    <script is:inline src={`/js/${materialize}.js`}></script>
+    <script is:inline src="/js/init.js"></script>
+    {page === "archive" && <script is:inline src="/js/archive.js"></script>}
+  </body>
+</html>

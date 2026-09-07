@@ -1,0 +1,144 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { site } from "../data/site";
+---
+<SiteLayout page="staff">
+<main>
+            <div class="container">
+                <div class="row"></div>
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab"><a class="active" href="#thisyear">2025 Organizers</a></li>
+                            <li class="tab"><a href="#pastdirectors">Past JHMMC Directors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="thisyear" class="col s12">
+                
+                <div class="container">
+                    <h4>2025 Organizers</h4>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card grey lighten-4">
+                                <div class="card-content black-text">
+                                    <span class="card-title">Student Directors</span>
+                                    <p>Michael Middlezong, Arnav Adepu, Gabriele Herr, Alexander Choi, & Mythreya Dharani</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card grey lighten-4">
+                                <div class="card-content black-text">
+                                    <span class="card-title">Exam Leaders</span>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="name">Fourth Grade:</td>
+                                                <td>Aalok Pathak</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">Fifth Grade:</td>
+                                                <td>Abigail Karpova</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">Sixth Grade:</td>
+                                                <td>Chris Yun</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">Seventh Grade:</td>
+                                                <td>Michael Pylypovych</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">Eighth Grade:</td>
+                                                <td>Danny Paik</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card grey lighten-4">
+                                <div class="card-content black-text">
+                                    <span class="card-title">Webmaster</span>
+                                    <a class="black-text" href={`mailto:${site.maintainer.email}`}>{site.maintainer.name}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <br />
+            </div>
+
+            <div id="pastdirectors" class="col s12">
+                <div class="container">
+                    <h4>Past JHMMC Directors</h4>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="name">2024:</td>
+                                <td>Andrea Chen, Anthony Kim, Daniel Gilman, & Jeremy Lee</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2023:</td>
+                                <td>Marvin Mao, Joy Ren, Justin Zhang, & Krish Ramkumar</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2022:</td>
+                                <td>Jaiden Shin, Nikhil Mudumbi, & Lance Bae</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2021:</td>
+                                <td>Alicia Zhang & Yul Kim</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2020:</td>
+                                <td>Andy Jung, Gregory Pylypovych, & Simon Sun</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2019:</td>
+                                <td>Sameer Pai & Sunay Joshi</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2018:</td>
+                                <td>Haneul Shin & Shalin Patel</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2017:</td>
+                                <td>Haneul Shin & Zi Xuan (David) Ni</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2016:</td>
+                                <td>David Song & June Lee</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2015:</td>
+                                <td>Jennifer Park & Zachary Stier</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2014:</td>
+                                <td>AJ Dennis, Alexander Katz & Kelvin Wang</td>
+                            </tr>
+                            <tr>
+                                <td class="name">2013:</td>
+                                <td>Jonathan Yu & Steven Kwon</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </main>
+</SiteLayout>
