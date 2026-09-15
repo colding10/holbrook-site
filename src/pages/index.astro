@@ -1,6 +1,7 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
 import Sponsors from "../components/Sponsors.astro";
+import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
 ---
 <SiteLayout page="index">
 <main id="main-content">
@@ -9,9 +10,9 @@ import Sponsors from "../components/Sponsors.astro";
                     <li>
                         <img src="/images/background1.jpg" alt="Students at the Joe Holbrook Memorial Math Competition" />
                         <div class="caption center-align">
-                            <h1 class="hero-title">14th Annual Joe Holbrook Memorial Math Competition</h1>
+                            <h1 class="hero-title">Joe Holbrook Memorial Math Competition</h1>
                             <h5 class="light grey-text text-lighten-3">
-                                October 11-12, 2025 at the Bergen County Academies
+                                November 14–15, 2026
                             </h5>
                         </div>
                     </li>
@@ -34,6 +35,7 @@ import Sponsors from "../components/Sponsors.astro";
 
             <div class="container">
                 <div class="section home-summary">
+                    <NextCompetitionNotice />
                     <blockquote>
                         The 14th annual JHMMC took place on October 11-12, 2025. Full results and tests are now available on the
                         <a href="/archive">Archive</a> page. Thanks to all those who competed!
