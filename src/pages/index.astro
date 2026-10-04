@@ -2,6 +2,7 @@
 import SiteLayout from "../layouts/SiteLayout.astro";
 import Sponsors from "../components/Sponsors.astro";
 import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
+import RegistrationLinks from "../components/RegistrationLinks.astro";
 ---
 <SiteLayout page="index">
 <main id="main-content">
@@ -12,7 +13,7 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
                         <div class="caption center-align">
                             <h1 class="hero-title">Joe Holbrook Memorial Math Competition</h1>
                             <h5 class="light grey-text text-lighten-3">
-                                November 14–15, 2026
+                                November 14-15, 2026
                             </h5>
                         </div>
                     </li>
@@ -35,7 +36,7 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
 
             <div class="container">
                 <div class="section home-summary">
-                    <NextCompetitionNotice />
+                    <NextCompetitionNotice showRegistration={false} />
                     
                     <div class="row intro-grid">
                         <div class="col s12 m6">
@@ -47,9 +48,8 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
 
                                 <p class="light">
                                     The <i>BCA Math Team</i>
-                                    proudly presented the 14th Annual Joe Holbrook Memorial Math Competition, formerly
-                                    known as the BCAMC, on October 11-12, 2025. This competition brought the best and
-                                    brightest elementary and middle school students from the greater Bergen County area
+                                    organizes the Joe Holbrook Memorial Math Competition, formerly
+                                    known as the BCAMC. This competition brings elementary and middle school students from the greater Bergen County area
                                     to meet and compete with fellow students.
                                 </p>
                                 <p>
@@ -60,14 +60,9 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
                         </div>
                         <div class="col s12 m6">
                             <div class="icon-block">
-                                <a href="/archive">
-                                    <h2 class="center brown-text"><i class="material-icons">assignment_ind</i></h2>
-                                </a>
-                                <h5 class="center">View Past Competitions</h5>
-                                <p class="light">
-                                    The 2025 JHMMC was held across two days separated by grade, with grades 4-6 competing on 
-                                    Saturday, October 11, and grades 7-8 competing on Sunday, October 12.
-                                </p>
+                                <h2 class="center brown-text"><i class="material-icons" aria-hidden="true">assignment_ind</i></h2>
+                                <h5 class="center">Registration</h5>
+                                <RegistrationLinks />
                                 <p class="light">
                                     All exams, solutions, and results from 2025 and previous years are available on the
                                     <a href="/archive">Archive</a> page.

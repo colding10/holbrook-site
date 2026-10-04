@@ -1,0 +1,15 @@
+---
+import { registration } from "../data/registration";
+---
+<div class="registration-links">
+  <p>Select your grade to register. Attend on the day listed below.</p>
+  <ul aria-label="Competition registration">
+    {registration.map(({ label, day, url }) => <li><a href={url}>{label}</a>: {day}</li>)}
+  </ul>
+</div>
+<style>
+  p { margin: .75rem 0; line-height: 1.6; }
+  ul { margin: .75rem 0; }
+  li + li { margin-top: .5rem; }
+  a { font-weight: 500; text-decoration: underline; text-underline-offset: .2em; }
+</style>

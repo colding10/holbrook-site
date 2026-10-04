@@ -1,6 +1,7 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
 import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
+import RegistrationLinks from "../components/RegistrationLinks.astro";
 ---
 <SiteLayout page="about">
 <main id="main-content" class="content-page">
@@ -22,50 +23,33 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
         <div id="quickinfo" class="col s12">
             <div class="container">
                 <h4>Quick Information</h4>
-                <NextCompetitionNotice />
-                
-                <blockquote>
-                    The 14th annual JHMMC took place on October 11-12, 2025. Thank you to all participants! Information below is for reference about the 2025 competition.
-                </blockquote>
-                <p>The contest was held <i>in person</i> across two days separated by grade.</p>
+                <NextCompetitionNotice showRegistration={false} />
                 <table class="highlight">
                     <tbody>
                         <tr>
                             <td class="name">Dates:</td>
-                            <td>The competition was held on Saturday, October 11, 2025 for 6th graders and below; Sunday, October 12, 2025 for 7th-8th graders.</td>
+                            <td>Saturday, November 14, 2026 for grades 4-6; Sunday, November 15, 2026 for grades 7-8.</td>
                         </tr>
                         <tr>
                             <td class="name">Time:</td>
-                            <td>8:30 AM to 2:00 PM</td>
+                            <td>The 2026 daily schedule will be posted here.</td>
                         </tr>
                         <tr>
                             <td class="name">Eligibility:</td>
-                            <td>The competition was open to students from the
-                                4th to 8th grades. Those in 3rd grade and
-                                below could register as 4th
-                                grade. Students could only take one contest,
-                                that for their own grade level. Students who participated on Saturday could not participate again on Sunday.
-                            </td>
+                            <td>Grades 4-6 compete on Saturday; grades 7-8 compete on Sunday. Use the registration link for your grade level.</td>
                         </tr>
 
                         <tr>
                             <td class="name">Registration:</td>
                             <td>
-                                Registration for the 2025 competition has closed. The competition took place on October 11-12, 2025.<br><br>
-
-                                Online and on-site registration were available for both days of the competition. 
-                                The participation fee was $40 for online registration and $50 for walk-in registration (cash only).
-                                <br><br>
-                                Please check back in fall 2026 for information about the 2026 competition.
+                                <RegistrationLinks />
                             </td>
                         </tr>
 
                         <tr>
                             <td class="name">Results:</td>
-                            <td> Results were compiled, with top-scoring
-                                participants announced the day-of at the
-                                award ceremony. Complete results and all test materials 
-                                are now available on the <a href="/archive.html">Archive page</a>.
+                            <td>Results and test materials from previous competitions
+                                are available on the <a href="/archive">Archive page</a>.
                             </td>
                         </tr>
 
@@ -88,7 +72,8 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
 
         <div id="schedule" class="col s12">
             <div class="container">
-                <h4>Schedule</h4>
+                <h4>2025 Schedule (Reference)</h4>
+                <p>The 2026 daily schedule will be posted here. The times below are from the 2025 competition.</p>
                 <p>
                     The schedule for each day of the 2025 competition was:</p>
                     <ul class="schedule-list">
@@ -144,7 +129,8 @@ import NextCompetitionNotice from "../components/NextCompetitionNotice.astro";
         </div>
         <div id="rules" class="col s12">
             <div class="container">
-                <h4>Rules</h4>
+                <h4>2025 Rules (Reference)</h4>
+                <p>The rules below are from the 2025 competition. The 2026 rules will be posted here.</p>
                 <div class="row">
                     <div class="col s12">
                         <ul class="collection with-header">

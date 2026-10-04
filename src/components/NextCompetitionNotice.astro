@@ -1,3 +1,9 @@
+---
+import RegistrationLinks from "./RegistrationLinks.astro";
+interface Props { showRegistration?: boolean; }
+const { showRegistration = true } = Astro.props;
+---
 <blockquote>
-  JHMMC will be on <strong>November 14–15, 2026</strong>, and registration will be available shortly.
+  JHMMC is on <strong>November 14-15, 2026</strong>. Registration is open.
+  {showRegistration && <RegistrationLinks />}
 </blockquote>

@@ -61,7 +61,7 @@ const homeText = readFileSync(path.join(output, "index.html"), "utf8")
   .replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, "")
   .replace(/<[^>]+>/g, "")
   .replace(/\s+/g, " ");
-assert.match(homeText, /The BCA Math Team proudly presented/, "Space after italic team name");
+assert.match(homeText, /The BCA Math Team organizes/, "Space after italic team name");
 assert.match(homeText, /available on the Archive page/, "Space before archive link");
 assert.match(homeText, /Maintained by Colin Ding/, "Space before maintainer link");
 assert.match(homeText, new RegExp(`${new Date().getFullYear()} JHMMC`), "Current copyright year");
