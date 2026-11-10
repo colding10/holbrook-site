@@ -1,3 +1,5 @@
+export const onlineRegistrationOpen = true;
+
 export const registration = [
   {
     label: "Grades 4-6",

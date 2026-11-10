@@ -1,11 +1,16 @@
 ---
-import { registration } from "../data/registration";
+import { onlineRegistrationOpen, registration } from "../data/registration";
 ---
 <div class="registration-links">
-  <p>Select your grade to register. Attend on the day listed below.</p>
-  <ul aria-label="Competition registration">
-    {registration.map(({ label, day, url }) => <li><a href={url}>{label}</a>: {day}</li>)}
-  </ul>
+  {onlineRegistrationOpen && (
+    <>
+      <p><strong>Online registration closes Thursday morning, November 12.</strong></p>
+      <ul aria-label="Online registration by grade">
+        {registration.map(({ label, day, url }) => <li><a href={url}>{label}</a>: {day}</li>)}
+      </ul>
+    </>
+  )}
+  <p>Walk-in registration is available each day for $50 (cash only).</p>
 </div>
 <style>
   p { margin: .75rem 0; line-height: 1.6; }
