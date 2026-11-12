@@ -1,4 +1,4 @@
-export const onlineRegistrationOpen = true;
+export const onlineRegistrationOpen = false;
 
 export const registration = [
   {
